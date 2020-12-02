@@ -167,3 +167,9 @@ we want and remove the unwanted values with a condition.
         Optional<String> opt = Optional.ofNullable("Hello World");
 
         System.out.println(opt.stream().map(String::toUpperCase).collect(Collectors.toList()));
+        
+        
+        
+https://www.oracle.com/technical-resources/articles/java/java8-optional.html
+
+https://medium.com/swlh/playing-with-java-optional-70ffecb9da33
