@@ -25,5 +25,21 @@ public class Main {
         //new way
             System.out.println(sc3.isPresent());
             System.out.println(sc3.isEmpty());
+
+            //Nested Objects
+        Computer c = new Computer();
+        SoundCard s = new SoundCard();
+        USB u = new USB();
+        u.setUsbname("USB 32GB");
+        s.setUsb(u);
+        c.setSoundCard(s);
+        //You can pass c gor getting usb name or you can pass null computer object to see orElse val
+        Computer computer = new Computer();
+        String usbName = Optional.ofNullable(computer)
+                .flatMap(comp -> comp.getSoundCard())
+                .flatMap(sndcard -> sndcard.getUsb())
+                .map(usb -> usb.getUsbname()).orElse("The Value Can Not Determined");
+
+        System.out.println(usbName);
     }
 }
