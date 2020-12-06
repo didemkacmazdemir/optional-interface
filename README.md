@@ -1,4 +1,4 @@
-# optional-interface
+# optional
 Optional allows an object to wrap nullable values.
 
 Optional<ReferenceTypeObject> opt = ... 
